@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #2D2E32;
+}
+
+/* Poppins Font Black */
+@font-face {
+    font-family: PoppinsBlack;
+    src: url('./assets/fonts/Poppins-Black.ttf');
+}
+/* Poppins Font Bold */
+@font-face {
+    font-family: PoppinsBold;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+/* Poppins Font */
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+/* Profile CSS */
+/* Remove existing .image-container and .hero-image styles */
+
+/* Profile CSS */
+/* Remove existing .hero-image styles */
+
+/* Profile CSS */
+/* Define the animation keyframes */
+/* Define the animation keyframes */
+/* Define the animation keyframes */
+/* Define the cubic-bezier timing function */
+@keyframes randomBorder {
+    0% {
+      border-radius: 50% 50% 70% 30% / 30% 70% 50% 50%;
+    }
+    25% {
+      border-radius: 40% 60% 70% 30% / 60% 40% 70% 30%;
+    }
+    50% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    75% {
+      border-radius: 30% 70% 50% 50% / 50% 30% 70% 50%;
+    }
+    100% {
+      border-radius: 50% 50% 70% 30% / 30% 70% 50% 50%;
+    }
+  }
+  
+  /* Apply styles to the image */
+  .hero-image {
+    width: 20rem;
+    height: 20rem;
+    border: 3px solid #F9F9F9;
+    border-radius: 50%; /* Circular border */
+    animation: randomBorder 8s cubic-bezier(0.42, 0, 0.58, 1) infinite; /* Use ease-in-out timing */
+    transform-origin: center;
+    object-fit: cover; /* Maintain aspect ratio without stretching */
+  }
+  
