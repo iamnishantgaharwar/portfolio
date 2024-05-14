@@ -50,7 +50,7 @@ const SmallScreenMeetups = () => {
             }}
         ></div>
         <div
-            className="h-80 my-5 rounded hover:shadow-3xl transition-all border"
+            className="h-80 my-5 rounded hover:shadow-3xl transition-all"
             style={{
                 backgroundImage: `url(${rtCampImg2})`,
                 backgroundSize: 'cover',
