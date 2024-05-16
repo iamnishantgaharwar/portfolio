@@ -1,22 +1,38 @@
+import { useState, useEffect, lazy, Suspense } from 'react';
 import './App.css';
-import Homepage from './pages/Homepage';
 import Lenis from 'lenis';
-const lenis = new Lenis()
+import Loader from './pages/Loader';
+const lenis = new Lenis();
 
 function raf(time: any) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
+	lenis.raf(time);
+	requestAnimationFrame(raf);
 }
 
-requestAnimationFrame(raf)
+requestAnimationFrame(raf);
+
+const Homepage = lazy(() => import('./pages/Homepage'));
 
 function App() {
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		// Simulate data loading or any async operations
+		setTimeout(() => {
+			setLoading(false); // Turn off loader after a delay (simulating loading completion)
+		}, 3000); // Change the delay as needed
+	}, []); // Run once on component mount
+
 	return (
-		<>
-			<div className=''>
-				<Homepage />
-			</div>
-		</>
+		<div className="h-screen">
+			{loading ? (
+				<Loader />
+			) : (
+				<Suspense fallback={<Loader />}>
+					<Homepage />
+				</Suspense>
+			)}
+		</div>
 	);
 }
 
