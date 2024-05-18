@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# My Portfolio
+Welcome to my portfolio project! This project showcases my skills and projects using Vite, TypeScript, React, Tailwind CSS, GSAP, and Lenis.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Hero Ui](#hero-ui)
+- [Website Link](#website-link)
 
-Currently, two official plugins are available:
+## Introduction
+This is my personal portfolio website where I display my skills, projects, and contact information. The goal of this project is to create a fast, modern, and responsive portfolio site using the latest web technologies. The Hero UI design is inspired by [Stefan Topalovic's website](https://www.stefantopalovic.com/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+-  **Fast and Lightweight**: Built with Vite for a lightning-fast development experience.
+-  **Type Safe**: Utilizes TypeScript for static type checking.
+-  **Component-Based**: Developed with React for a modular and maintainable codebase.
+-  **Responsive Design**: Optimized for all screen sizes.
+-  **Modern UI**: Clean and modern user interface design with Tailwind CSS.
+-  **Smooth Animations**: Enhanced user experience with GSAP animations.
+-  **Smooth Scrolling**: Seamless scrolling experience using Lenis.
 
-## Expanding the ESLint configuration
+## Technologies Used
+-  **Vite**: Next Generation Frontend Tooling
+-  **TypeScript**: Typed JavaScript at Any Scale
+-  **React**: A JavaScript library for building user interfaces
+-  **Tailwind CSS**: A utility-first CSS framework for rapid UI development
+-  **GSAP**: GreenSock Animation Platform for high-performance animations
+-  **Lenis**: A smooth scrolling library
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+To run this project locally, follow these steps:
+1.  **Clone the repository**:
+```bash
+git clone https://github.com/iamnishantgaharwar/porfolio
+cd porfolio
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Website Link
+### https://nishantgaharwar.com/
