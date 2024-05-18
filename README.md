@@ -6,7 +6,6 @@ Welcome to my portfolio project! This project showcases my skills and projects u
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Hero Ui](#hero-ui)
 - [Website Link](#website-link)
 
 ## Introduction
