@@ -1,15 +1,7 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect, lazy } from 'react';
 import './App.css';
-import Lenis from 'lenis';
 import Loader from './pages/Loader';
-const lenis = new Lenis();
 
-function raf(time: any) {
-	lenis.raf(time);
-	requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
 
 const Homepage = lazy(() => import('./pages/Homepage'));
 
@@ -24,15 +16,7 @@ function App() {
 	}, []); // Run once on component mount
 
 	return (
-		<div className="h-screen">
-			{loading ? (
-				<Loader />
-			) : (
-				<Suspense fallback={<Loader />}>
-					<Homepage />
-				</Suspense>
-			)}
-		</div>
+		<div className="h-screen">{loading ? <Loader /> : <Homepage />}</div>
 	);
 }
 
