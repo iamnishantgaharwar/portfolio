@@ -10,7 +10,7 @@ const Contact = () => {
             <div className='w-10 mt-10 flex items-center'>
                 <img src={mailImg} alt="Mail" />
                 <div>
-                    <p className="ml-5 text-lg font-PoppinsBold text-primary_white">Email hello@nishantgaharwar.com</p>
+                    <p className="ml-5 text-lg font-PoppinsBold text-primary_white">Email iamnishantgaharwar@gmail.com</p>
                 </div>
             </div>
         </div>
