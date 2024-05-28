@@ -21,8 +21,6 @@ export default {
       customGray: '#DDDDDD'
     },
   },
-  plugins: [
-    require('tailwind-scrollbar'),
-  ],
+  plugins: [],
 }
 
