@@ -45,27 +45,27 @@ const Meetups: React.FC = () => {
           <div className="sm:w-4/6 md:w-3/6 grid grid-cols-5 grid-rows-6 gap-5">
             <Suspense fallback={<div>Loading...</div>}>
               <LazyImage
-                className="col-span-2 row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
+                className="col-span-2 object-cover h-full row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
                 src="wp-loyalty-img1"
               />
               <LazyImage
-                className="col-span-3 row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
+                className="col-span-3 object-cover h-full row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
                 src="rtcampimg1"
               />
               <LazyImage
-                className="col-span-3 row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
+                className="col-span-3 object-cover h-full row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
                 src="wp2"
               />
               <LazyImage
-                className="col-span-2 row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
+                className="col-span-2 object-cover h-full row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
                 src='wp1'
               />
               <LazyImage
-                className="col-span-2 row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
+                className="col-span-2 object-cover h-full row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
                 src="wp3"
               />
               <LazyImage
-                className="col-span-3 row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
+                className="col-span-3 object-cover h-full row-span-2 rounded hover:shadow-3xl hover:-translate-y-1 transition-all"
                 src="rtcampimg2"
               />
             </Suspense>
