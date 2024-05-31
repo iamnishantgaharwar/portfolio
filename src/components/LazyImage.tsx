@@ -64,10 +64,10 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, className }) => {
 			className={className}
 			src={imageSrc}
 			alt="Community Meetups Images"
-      width={'100%'}
-      height={'100%'}
-      loading='lazy'
-		/>
+			width={'100%'}
+			height={'100%'}
+			loading="lazy"
+			/>
 	) : (
 		<div className={className} style={{ width: '100%', height: '100%' }}>
 			Loading...
