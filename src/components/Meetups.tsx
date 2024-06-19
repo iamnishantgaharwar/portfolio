@@ -45,39 +45,39 @@ const Meetups: React.FC = () => {
 				<SmallScreenMeetups />
 			) : (
 				<main className="flex justify-center h-[750px]">
-					<div className="sm:w-4/6 md:w-3/6 grid grid-cols-5 grid-rows-6 gap-5">
+					<div className="sm:w-4/6 lg:w-3/6 grid grid-cols-5 grid-rows-6 gap-5">
 						<Suspense fallback={<div>Loading...</div>}>
-							<div className='col-span-2 row-span-2 hover:shadow-3xl hover:-translate-y-1 transition-all'>
+							<div className='col-span-2 row-span-2'>
 								<LazyImage
 									className=" object-cover h-full  rounded "
 									src="wp-loyalty-img1"
 								/>
 							</div>
-							<div className='col-span-3 row-span-2  hover:shadow-3xl hover:-translate-y-1 transition-all'>
+							<div className='col-span-3 row-span-2 '>
 								<LazyImage
 									className=" object-cover h-full  rounded"
 									src="rtcampimg1"
 								/>
 							</div>
-							<div className='col-span-3 row-span-2 hover:shadow-3xl hover:-translate-y-1 transition-all' >
+							<div className='col-span-3 row-span-2' >
 								<LazyImage
 									className=" object-cover h-full  rounded "
 									src="wp2"
 								/>
 							</div>
-							<div className='col-span-2 row-span-2 hover:shadow-3xl hover:-translate-y-1 transition-all'>
+							<div className='col-span-2 row-span-2'>
 								<LazyImage
 									className=" object-cover h-full  rounded "
 									src="wp1"
 								/>
 							</div>
-							<div className='col-span-2 row-span-2 hover:shadow-3xl hover:-translate-y-1 transition-all'>
+							<div className='col-span-2 row-span-2'>
 								<LazyImage
 									className=" object-cover h-full  rounded "
 									src="wp3"
 								/>
 							</div>
-							<div className='col-span-3 row-span-2  hover:shadow-3xl hover:-translate-y-1 transition-all'>
+							<div className='col-span-3 row-span-2 '>
 								<LazyImage
 									className=" object-cover h-full rounded "
 									src="rtcampimg2"

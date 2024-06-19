@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import Lenis from 'lenis';
+import { Menu } from '../components/Menu/Menu';
 
 // Initialize Lenis for smooth scrolling
 const lenis = new Lenis();
@@ -17,7 +18,9 @@ requestAnimationFrame(raf);
 
 const Homepage = () => {
 	return (
-		<>
+		<>	<div className=''>
+				<Menu />
+		</div>
 			<div className="h-screen">
 				<Navbar />
 				<Hero />

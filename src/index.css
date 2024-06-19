@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 body{
-    background-color: #2D2E32;
+    background-color: #000000;
+    width: 100vw;
+    overflow: hidden;
 }
 
 /* Poppins Font Black */
