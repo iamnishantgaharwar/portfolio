@@ -1,10 +1,12 @@
-import { Suspense } from 'react';
-import Hero from '../components/Hero';
-import Meetups from '../components/Meetups';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Contact from '../components/Contact';
+import { Suspense, lazy } from 'react';
 import Lenis from 'lenis';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+
+// lazy load the Meetups component
+const Meetups = lazy(() => import('../components/Meetups'));
+const Footer = lazy(() => import('../components/Footer'));
+const Contact = lazy(() => import('../components/Contact'));
 
 // Initialize Lenis for smooth scrolling
 const lenis = new Lenis();

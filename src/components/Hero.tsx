@@ -18,9 +18,9 @@ const Hero = () => {
 					<div className="text-center sm:text-left font-PoppinsBold">
 						<span>Tech Stack:</span>
 						<ul className='flex justify-center sm:flex-col mt-5 mx-5 sm:mx-0'>
-							<li><img src="https://skillicons.dev/icons?i=html,css,tailwind,js,php" alt="skill-icon" /></li>
-							<li><img src="https://skillicons.dev/icons?i=react,nodejs,express,postgres" alt="skill-icon" /></li>
-							<li><img src="https://skillicons.dev/icons?i=prisma,mysql,git" alt="skill-icon" /></li>
+							<li><img className='my-1' src="https://skillicons.dev/icons?i=html,css,tailwind,js,php" alt="skill-icon" /></li>
+							<li><img className='my-1' src="https://skillicons.dev/icons?i=react,nodejs,express,postgres" alt="skill-icon" /></li>
+							<li><img className='my-1' src="https://skillicons.dev/icons?i=prisma,mysql,git" alt="skill-icon" /></li>
 							<li></li>
 						</ul>
 					</div>

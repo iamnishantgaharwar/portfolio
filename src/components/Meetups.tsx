@@ -1,6 +1,4 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
-import SmallScreenMeetups from './SmallScreenMeetups';
-
 const LazyImage = lazy(() => import('./LazyImage'));
 
 const Meetups: React.FC = () => {
@@ -41,43 +39,40 @@ const Meetups: React.FC = () => {
 					Community Meetups
 				</h1>
 			</div>
-			{isSmallScreen.width < 768 ? (
-				<SmallScreenMeetups />
-			) : (
-				<main className="flex justify-center h-[750px]">
-					<div className="sm:w-4/6 md:w-3/6 grid grid-cols-5 grid-rows-6 gap-5">
+				<main className="flex justify-center h-full mx-5 sm:mx-0 sm:h-[750px]">
+					<div className="sm:w-4/6 lg:w-3/6 flex flex-col sm:grid sm:grid-cols-5 sm:grid-rows-6 gap-2 sm:gap-5">
 						<Suspense fallback={<div>Loading...</div>}>
-							<div className='col-span-2 row-span-2 hover:shadow-3xl hover:-translate-y-1 transition-all'>
+							<div className='sm:col-span-2 sm:row-span-2'>
 								<LazyImage
 									className=" object-cover h-full  rounded "
 									src="wp-loyalty-img1"
 								/>
 							</div>
-							<div className='col-span-3 row-span-2  hover:shadow-3xl hover:-translate-y-1 transition-all'>
+							<div className='sm:col-span-3 sm:row-span-2 '>
 								<LazyImage
 									className=" object-cover h-full  rounded"
 									src="rtcampimg1"
 								/>
 							</div>
-							<div className='col-span-3 row-span-2 hover:shadow-3xl hover:-translate-y-1 transition-all' >
+							<div className='sm:col-span-3 sm:row-span-2' >
 								<LazyImage
 									className=" object-cover h-full  rounded "
 									src="wp2"
 								/>
 							</div>
-							<div className='col-span-2 row-span-2 hover:shadow-3xl hover:-translate-y-1 transition-all'>
+							<div className='sm:col-span-2 sm:row-span-2'>
 								<LazyImage
 									className=" object-cover h-full  rounded "
 									src="wp1"
 								/>
 							</div>
-							<div className='col-span-2 row-span-2 hover:shadow-3xl hover:-translate-y-1 transition-all'>
+							<div className='sm:col-span-2 sm:row-span-2'>
 								<LazyImage
 									className=" object-cover h-full  rounded "
 									src="wp3"
 								/>
 							</div>
-							<div className='col-span-3 row-span-2  hover:shadow-3xl hover:-translate-y-1 transition-all'>
+							<div className='sm:col-span-3 sm:row-span-2 '>
 								<LazyImage
 									className=" object-cover h-full rounded "
 									src="rtcampimg2"
@@ -86,7 +81,6 @@ const Meetups: React.FC = () => {
 						</Suspense>
 					</div>
 				</main>
-			)}
 		</section>
 	);
 };
