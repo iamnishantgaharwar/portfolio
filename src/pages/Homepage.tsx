@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import Lenis from 'lenis';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import Update from '../components/Update';
 
 // lazy load the Meetups component
 const Meetups = lazy(() => import('../components/Meetups'));
@@ -21,6 +22,7 @@ const Homepage = () => {
 	return (
 		<>
 			<div className="h-screen">
+				<Update />
 				<Navbar />
 				<Hero />
 				<Suspense fallback={<div>Loading...</div>}>
