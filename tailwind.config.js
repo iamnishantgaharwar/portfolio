@@ -10,15 +10,20 @@ export default {
         'PoppinsBlack': ['PoppinsBlack'],
         'PoppinsBold': ['PoppinsBold'],
         'PoppinsRegular': ['PoppinsRegular'],
+        'PoppinsSemiBold': ['PoppinsSemiBold'],
+        'PoppinsSemiBoldItalic': ['PoppinsSemiBoldItalic'],
       },
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(221, 221, 221, 0.2)',
       }
     },
     colors: {
-      primary_white: '#F9F9F9',
-      secondary_black: '#2D2E32',
-      customGray: '#DDDDDD'
+      primary_white: '#D9D9D9',
+      secondary_black: '#0D0D0D',
+      customGray: '#1C1C1C',
+      greenTagBg: '#86EFAC',
+      greenTagText: '#166534',
+      customGrayText: '#DDDDDD',
     },
   },
   plugins: [],
