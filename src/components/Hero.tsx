@@ -10,7 +10,7 @@ const Hero = () => {
 						Front-End React
 						<br /> Developer
 					</h1>
-					<p className="text-base text-center sm:text-left sm:text-lg font-PoppinsRegular mb-10 text-customGray">
+					<p className="text-base text-center sm:text-left sm:text-lg font-PoppinsRegular mb-10 text-customGrayText">
 					Hey there, I'm Nishant Gaharwar, an enthusiastic React Front-end
 						<br />
 						Developer hailing from Ahmedabad, India.
