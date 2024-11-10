@@ -1,6 +1,6 @@
-import { Suspense, lazy, useEffect } from 'react';
-import Navbar from '../components/Navbar';
+import { Suspense, lazy } from 'react';
 import Hero from '../components/Hero';
+import Navbar from '../components/Navbar';
 
 // Lazy-loaded components
 const Meetups = lazy(() => import('../components/Meetups'));

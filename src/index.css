@@ -62,3 +62,7 @@ body{
     object-fit: cover; /* Maintain aspect ratio without stretching */
   }
   
+  .hero-font {
+    font-size: clamp(48px, 5.4vw, 60px);
+    line-height: 55px;
+  }
