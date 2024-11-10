@@ -1,6 +1,7 @@
-import { useState, useEffect, lazy } from 'react';
+
+import { useState, useEffect } from 'react';
 import Loader from './pages/Loader';
-const AppRoute = lazy(() => import('./AppRoute'));
+import Homepage from './pages/Homepage';
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -12,9 +13,7 @@ function App() {
 	}, []);
 
 	return (
-		<div className="h-screen">
-			{loading ? <Loader /> : <AppRoute />}
-		</div>
+			<div className="h-screen">{loading ? <Loader /> : <Homepage />}</div>
 	);
 }
 export default App;
