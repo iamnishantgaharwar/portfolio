@@ -1,37 +1,7 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react';
+import React, { lazy, Suspense } from 'react';
 const LazyImage = lazy(() => import('./LazyImage'));
 
 const Meetups: React.FC = () => {
-	const [isSmallScreen, setIsSmallScreen] = useState({
-		width: window.innerWidth,
-		height: window.innerHeight,
-	});
-
-	const updateWindowSize = () => {
-		setIsSmallScreen({
-			width: window.innerWidth,
-			height: window.innerHeight,
-		});
-	};
-
-	const debounce = (func: any, delay: any) => {
-		let timeoutId;
-		return (...args) => {
-			clearTimeout(timeoutId);
-			timeoutId = setTimeout(() => {
-				func(...args);
-			}, delay);
-		};
-	};
-
-	useEffect(() => {
-		const debouncedUpdateWindowSize = debounce(updateWindowSize, 250);
-		window.addEventListener('resize', debouncedUpdateWindowSize);
-		return () => {
-			window.removeEventListener('resize', debouncedUpdateWindowSize);
-		};
-	}, [isSmallScreen]);
-
 	return (
 		<section className="mt-40 sm:mt-0">
 			<div className="flex justify-center mb-20">

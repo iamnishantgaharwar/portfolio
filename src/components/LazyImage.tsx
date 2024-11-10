@@ -1,4 +1,6 @@
-import React, { useEffect, useState, memo } from 'react';
+import React, { useState, memo } from 'react';
+import useIntersectionObserver from '../hooks/useIntersectionObserver.tsx'
+import { Loader } from 'lucide-react';
 
 interface LazyImageProps {
   src: string;
@@ -18,25 +20,23 @@ const LazyImage: React.FC<LazyImageProps> = memo(({ src, className }) => {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const loadImage = async () => {
-      try {
-        const importer = imageMap[src];
-        if (!importer) {
-          console.error(`Image ${src} not recognized`);
-          setError(`Image not recognized: ${src}`);
-          return;
-        }
-        const importedImage = await importer();
-        setImageSrc(importedImage.default);
-      } catch (error) {
-        console.error(`Failed to load image ${src}: `, error);
-        setError(`Failed to load image: ${src}`);
+  const loadImage = async () => {
+    try {
+      const importer = imageMap[src];
+      if (!importer) {
+        console.error(`Image ${src} not recognized`);
+        setError(`Image not recognized: ${src}`);
+        return;
       }
-    };
+      const importedImage = await importer();
+      setImageSrc(importedImage.default);
+    } catch (error) {
+      console.error(`Failed to load image ${src}: `, error);
+      setError(`Failed to load image: ${src}`);
+    }
+  };
 
-    loadImage();
-  }, [src]);
+  const imageRef = useIntersectionObserver(loadImage, { threshold: 0.1 });
 
   if (error) {
     return <div className={className} style={{ width: '100%', height: '100%' }}>Error loading image.</div>;
@@ -52,8 +52,8 @@ const LazyImage: React.FC<LazyImageProps> = memo(({ src, className }) => {
       loading="lazy"
     />
   ) : (
-    <div className={className} style={{ width: '100%', height: '100%' }}>
-      Loading...
+    <div ref={imageRef} className="flex justify-center items-center" style={{ width: '100%', height: '100%' }}>
+      <Loader color='white' size={24} />
     </div>
   );
 });

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Homepage from "./pages/Homepage"
-import Blogs from "./pages/Blogs"
+import { lazy } from "react"
+const Blogs = lazy(() => import('./pages/Blogs'));
 
 const AppRoute = () => {
   return (
