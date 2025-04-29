@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const useIntersectionObserver = (callback, options) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [_, setIsIntersecting] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
